@@ -20,4 +20,12 @@ end
 
 group :development do
   gem 'spring'
+  gem 'guard-rspec', require: false
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'webmock'
 end

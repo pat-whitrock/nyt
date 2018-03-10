@@ -30,4 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activemodel:
+    errors:
+      models:
+        batch_story_creation:
+          attributes:
+            nyt_stories:
+              too_short: 'must contain at least 1 story'

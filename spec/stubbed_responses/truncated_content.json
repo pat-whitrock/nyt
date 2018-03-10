@@ -1,0 +1,108 @@
+{
+  "page":{
+    "parameters":{
+      "title":"Some title"
+    },
+    "content":[
+      {
+        "name":"Content 1",
+        "collections":[
+
+        ]
+      },
+      {
+        "name":"Content 2",
+        "collections":[
+          {
+            "name":"Collection 1",
+            "assets":[
+
+            ]
+          }
+        ]
+      },
+      {
+        "name":"Content 3",
+        "collections":[
+          {
+            "name":"Collection 2",
+            "assets":[
+              {
+                "byline":"Byline 1",
+                "headline":"Headline 1",
+                "lastPublished":"Last Published 1",
+                "slugname":"Slugname 1",
+                "summary":"Summary 1",
+                "type":"Article",
+                "url":"Url 1",
+                "non_whitelisted_attribute":"Non Whitelisted Attribute 1",
+                "images":[
+
+                ]
+              },
+              {
+                "byline":"Byline 2",
+                "type":"Invalid Type",
+                "images":[
+                  {
+                    "name":"Name 2",
+                    "types":[
+                      {
+                        "content":"Content 1",
+                        "type":"Type 1",
+                        "non_whitelisted_attribute":"Non Whitelisted Attribute 1"
+                      },
+                      {
+                        "content":"Content 2",
+                        "type":"Type 2",
+                        "non_whitelisted_attribute":"Non Whitelisted Attribute 2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name":"Content 4",
+        "collections":[
+          {
+            "name":"Collection 3",
+            "assets":[
+              {
+                "byline":"Byline 3",
+                "type":"Article",
+                "images":[
+                  {
+                    "name":"Name 3",
+                    "types":[
+                      {
+                        "content":"Content 3",
+                        "type":"Type 3",
+                        "non_whitelisted_attribute":"Non Whitelisted Attribute 1"
+                      },
+                      {
+                        "content":"Content 4",
+                        "type":"Type 4",
+                        "non_whitelisted_attribute":"Non Whitelisted Attribute 2"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name":"Collection 4",
+            "assets":[
+
+            ]
+          }
+        ]
+      }
+    ],
+    "id":1
+  }
+}
