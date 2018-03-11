@@ -131,7 +131,7 @@ RSpec.describe Story do
     let!(:non_square320_image) { FactoryBot.create(:image, story: subject, type: 'non_square320') }
 
     it "returns the image_url for this story's 'square320' image" do
-      expect(subject.image_url).to eq URI('https://graphics8.nytimes.com/path/to/pic.png')
+      expect(subject.image_url).to eq 'https://graphics8.nytimes.com/path/to/pic.png'
     end
   end
 end

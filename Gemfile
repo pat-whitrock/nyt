@@ -7,7 +7,9 @@ end
 
 ruby '2.5.0'
 
-gem 'rails', '~> 5.1.5'
+unless ENV['BUNDLE_GEMFILE']&.end_with?('Gemfile.next')
+  gem 'rails', '~> 5.1.5'
+end
 
 gem 'pg'
 gem 'puma'

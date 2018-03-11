@@ -8,6 +8,6 @@ class Image < ApplicationRecord
   validates :content, :type, presence: true, uniqueness: { scope: :story }
 
   def image_url
-    URI::join(DOMAIN, content)
+    URI::join(DOMAIN, content).to_s
   end
 end

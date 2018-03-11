@@ -113,7 +113,7 @@ RSpec.describe Image do
     let(:content) { 'path/to/an/image.jpg' }
 
     it "joins the image's content to IMAGE_DOMAIN" do
-      expect(subject.image_url).to eq URI('https://graphics8.nytimes.com/path/to/an/image.jpg')
+      expect(subject.image_url).to eq 'https://graphics8.nytimes.com/path/to/an/image.jpg'
     end
   end
 end
