@@ -1,6 +1,8 @@
-<div id='main'>
-  <h1>Today's News</h1>
+<nav>
+  <%= link_to @dashboard.toggle_language, root_path(language: @dashboard.toggle_language), id: 'toggle_language' %>
+</nav>
 
+<div id='main'>
   <row>
     <section class='featured_stories'>
       <% @dashboard.featured_stories.each do |featured_story| %>
