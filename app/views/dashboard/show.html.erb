@@ -1,52 +1,60 @@
-<nav>
-  <%= link_to @dashboard.toggle_language_label, root_path(language: @dashboard.toggle_language), id: 'toggle_language' %>
-</nav>
+<div class='container'>
+  <nav class='row'>
+    <div class='col-12'>
+      <%= link_to @dashboard.toggle_language_label, root_path(language: @dashboard.toggle_language), id: 'toggle_language' %>
+    </div>
+  </nav>
 
-<div id='main'>
-  <row>
-    <section class='featured_stories'>
+  <div class='row'>
+    <section class='featured_stories col-9-sm'>
       <% @dashboard.featured_stories.each do |featured_story| %>
         <article>
-          <p class='headline'>
+          <h3 class='headline'>
             <%= link_to featured_story.headline, featured_story.url %>
-          </p>
-          <% if featured_story.byline.present? %>
-            <p class='byline'>
-              <%= featured_story.byline %>
-            </p>
-          <% end %>
-          <p class='last_published'>
-            <%= featured_story.last_published %>
-          </p>
-          <p class='image'>
+          </h3>
+          <h6>
+            <% if featured_story.byline.present? %>
+              <span class='byline'>
+                <%= featured_story.byline %> -
+              </span>
+            <% end %>
+            <span class='last_published'>
+              <%= featured_story.last_published %>
+            </span>
+          </h6>
+          <div class='col-3'>
             <%= image_tag featured_story.image_url %>
-          </p>
-          <p class='summary'>
-            <%= featured_story.summary %>
-          </p>
+          </div>
+          <div class='col-9'>
+            <p class='summary'>
+              <%= featured_story.summary %>
+            </p>
+          </div>
         </article>
       <% end %>
     </section>
 
-    <section class='side_stories'>
+    <section class='side_stories col-3-sm'>
       <% @dashboard.side_stories.each do |side_story| %>
         <article>
-          <p class='headline'>
+          <h3 class='headline'>
             <%= link_to side_story.headline, side_story.url %>
-          </p>
-          <% if side_story.byline.present? %>
-            <p class='byline'>
-              <%= side_story.byline %>
-            </p>
-          <% end %>
-          <p class='last_published'>
-            <%= side_story.last_published %>
-          </p>
+          </h3>
+          <h6>
+            <% if side_story.byline.present? %>
+              <div class='byline'>
+                <%= side_story.byline %>
+              </div>
+            <% end %>
+            <div class='last_published'>
+              <%= side_story.last_published %>
+            </div>
+          </h6>
           <p class='summary'>
             <%= side_story.summary %>
           </p>
         </article>
       <% end %>
     </section>
-  </row>
+  </div>
 </div>

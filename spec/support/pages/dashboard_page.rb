@@ -10,7 +10,7 @@ class DashboardPage < SitePrism::Page
       element :headline, '.headline a'
       element :byline, '.byline'
       element :last_published, '.last_published'
-      element :image, '.image img'
+      element :image, 'img'
       element :summary, '.summary'
     end
   end
