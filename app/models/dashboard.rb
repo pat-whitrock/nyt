@@ -17,6 +17,10 @@ class Dashboard
     english? ? 'Martian' : 'English'
   end
 
+  def toggle_language_label
+    "#{toggle_language} #{toggle_language_emoji}"
+  end
+
   private
 
   def current_language
@@ -33,5 +37,9 @@ class Dashboard
 
   def martianize(story)
     english? ? story : MartianPresenter.new(story)
+  end
+
+  def toggle_language_emoji
+    english? ? '👾' : '📚'
   end
 end

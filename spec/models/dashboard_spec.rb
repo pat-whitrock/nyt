@@ -115,4 +115,22 @@ RSpec.describe Dashboard do
       end
     end
   end
+
+  describe '#toggle_language_label' do
+    context 'when language is "English"' do
+      let(:language) { 'English' }
+
+      it 'returns "Martian 👾"' do
+        expect(subject.toggle_language_label).to eq 'Martian 👾'
+      end
+    end
+  end
+
+  context 'when language is "Martian"' do
+    let(:language) { 'Martian' }
+
+    it 'returns "English 📚"' do
+      expect(subject.toggle_language_label).to eq 'English 📚'
+    end
+  end
 end
