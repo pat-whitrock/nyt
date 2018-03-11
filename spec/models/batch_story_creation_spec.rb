@@ -97,7 +97,7 @@ RSpec.describe BatchStoryCreation do
 
             it 'rolls back the persistence of earlier stories' do
               expect {
-                expect { described_class.new.save! }.to raise_error
+                expect { described_class.new.save! }.to raise_error StandardError
               }.not_to change {
                 Story.count
               }
@@ -105,7 +105,7 @@ RSpec.describe BatchStoryCreation do
 
             it 'rolls back the persistence of earlier images' do
               expect {
-                expect { described_class.new.save! }.to raise_error
+                expect { described_class.new.save! }.to raise_error StandardError
               }.not_to change {
                 Image.count
               }

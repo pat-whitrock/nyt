@@ -1,0 +1,50 @@
+<div id='main'>
+  <h1>Today's News</h1>
+
+  <row>
+    <section class='featured_stories'>
+      <% @dashboard.featured_stories.each do |featured_story| %>
+        <article>
+          <p class='headline'>
+            <%= link_to featured_story.headline, featured_story.url %>
+          </p>
+          <% if featured_story.byline.present? %>
+            <p class='byline'>
+              <%= featured_story.byline %>
+            </p>
+          <% end %>
+          <p class='last_published'>
+            <%= featured_story.last_published %>
+          </p>
+          <p class='image'>
+            <%= image_tag featured_story.image_url %>
+          </p>
+          <p class='summary'>
+            <%= featured_story.summary %>
+          </p>
+        </article>
+      <% end %>
+    </section>
+
+    <section class='side_stories'>
+      <% @dashboard.side_stories.each do |side_story| %>
+        <article>
+          <p class='headline'>
+            <%= link_to side_story.headline, side_story.url %>
+          </p>
+          <% if side_story.byline.present? %>
+            <p class='byline'>
+              <%= side_story.byline %>
+            </p>
+          <% end %>
+          <p class='last_published'>
+            <%= side_story.last_published %>
+          </p>
+          <p class='summary'>
+            <%= side_story.summary %>
+          </p>
+        </article>
+      <% end %>
+    </section>
+  </row>
+</div>

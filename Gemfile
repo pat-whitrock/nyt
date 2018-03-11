@@ -24,8 +24,10 @@ group :development do
 end
 
 group :test do
+  gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'site_prism'
   gem 'webmock'
 end

@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :image do
     story
-    content 'Content 1'
-    type 'Type 1'
+    sequence(:content) { |i| "Content #{i}" }
+    sequence(:type) { |i| "Type #{i}" }
   end
 end
