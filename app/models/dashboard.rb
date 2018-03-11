@@ -6,11 +6,11 @@ class Dashboard
   end
 
   def featured_stories
-    @featured_stories ||= Story.with_image.recent.map(&method(:martianize))
+    @featured_stories ||= with_caching('featured') { Story.with_image.recent }
   end
 
   def side_stories
-    @side_stories ||= Story.without_image.recent.map(&method(:martianize))
+    @side_stories ||= with_caching('side') { Story.without_image.recent }
   end
 
   def toggle_language
@@ -41,5 +41,11 @@ class Dashboard
 
   def toggle_language_emoji
     english? ? '👾' : '📚'
+  end
+
+  def with_caching(story_type)
+    Rails.cache.fetch("#{Story.unscoped.joins(:images).cache_key}/#{story_type}/#{current_language}") do
+      yield.map(&method(:martianize))
+    end
   end
 end
