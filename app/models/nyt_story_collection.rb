@@ -27,6 +27,8 @@ class NytStoryCollection
     @response ||= JSON.parse(Net::HTTP.get(CONTENT_URI))
   end
 
+  # Whitelist parameters for eventual mass-assignment, similar to how you would
+  # for the payload in a controller action
   def whitelisted_response
     @whitelisted_response ||= ActionController::Parameters.new(response).require(:page).permit(
       content: [

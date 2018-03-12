@@ -3,6 +3,7 @@ class StoryCreation
 
   attr_accessor :byline, :headline, :images, :last_published, :summary, :url
 
+  # Convert camelcase attribute from NYT payload to snakecase
   alias_attribute :lastPublished, :last_published
 
   delegate :save!, to: :story
